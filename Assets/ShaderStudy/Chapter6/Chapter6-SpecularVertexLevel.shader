@@ -44,6 +44,7 @@ Shader "UnityShaderBook/Chapter6/Chapter6-SpecularVertexLevel"
 				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));
 				fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
 
+				// saturate函数可以把参数截取在0-1之间
 				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
 
 				fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
