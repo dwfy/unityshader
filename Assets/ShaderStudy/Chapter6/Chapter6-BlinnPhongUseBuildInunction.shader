@@ -1,4 +1,4 @@
-Shader "UnityShaderBook/Chapter6/Chapter6-BlinnPhongUseBuildInunction"
+Shader "UnityShaderBook/Chapter6/BlinnPhongUseBuildInunction"
 {
 Properties
 	{

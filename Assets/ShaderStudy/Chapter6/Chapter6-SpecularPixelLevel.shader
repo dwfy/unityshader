@@ -2,7 +2,7 @@
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "UnityShaderBook/Chapter6/Chapter6-SpecularPixelLevel"
+Shader "UnityShaderBook/Chapter6/SpecularPixelLevel"
 {
 	Properties
 	{
