@@ -49,10 +49,13 @@ Shader "UnityShaderBook/Chapter7/RampTexture"
 
 			v2f vert(a2v v){
 				v2f o;
-
+				// 将顶点位置变换到裁剪空间。
 				o.pos = UnityObjectToClipPos(v.vertex);
+				// 将法线转换到世界空间并归一化。
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
+				// 计算顶点在世界空间的位置。
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+				// 处理纹理坐标的缩放和偏移。
 				o.uv = TRANSFORM_TEX(v.texcoord, _RampTex);
 				return o;
 			}
